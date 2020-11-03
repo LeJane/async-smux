@@ -26,7 +26,7 @@ async fn get_mux_stream_pair() -> (MuxDispatcher, MuxDispatcher, MuxStream, MuxS
 }
 
 const PAYLOAD_SIZE: usize = 128 * 1024;
-const SEND_ROUND: usize = 1024;
+const SEND_ROUND: usize = 16 * 1024;
 
 fn tcp_throughput() {
     smol::block_on(async {
